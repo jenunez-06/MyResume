@@ -10435,9 +10435,11 @@ header.masthead .masthead-heading {
   text-align: center;
 }
 .team-member img {
-  width: 14rem;
-  height: 14rem;
+  width: 16rem;
+  height: 16rem;
   border: 0.5rem solid rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
 }
 .team-member h4 {
   margin-top: 1.5rem;
