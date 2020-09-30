@@ -10438,8 +10438,9 @@ header.masthead .masthead-heading {
   width: 16rem;
   height: 16rem;
   border: 0.5rem solid rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  position: relative;
+  /* overflow: hidden; */
+  /* position: relative; */
+  object-fit: cover; 
 }
 .team-member h4 {
   margin-top: 1.5rem;
