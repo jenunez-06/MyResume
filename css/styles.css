@@ -7593,6 +7593,9 @@ button.bg-dark:focus {
   margin-bottom: 1rem !important;
 }
 
+.linkedInLogo-black {
+  color: black;
+}
 .ml-3,
 .mx-3 {
   margin-left: 1rem !important;
