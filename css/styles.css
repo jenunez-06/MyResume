@@ -10114,16 +10114,14 @@ img::-moz-selection {
   color: #fed136;
 }
 
-.josue{
-  background-color: black;
-}
+
 .mainNav-index-only{
   background-color: transparent;
 
 }
 
 @media (min-width: 992px) {
-  #mainNav {
+  #mainNav{
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
     border: none;
