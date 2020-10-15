@@ -1,6 +1,6 @@
 # MyResume
 
-run the file called runMe.sh to compile the website. 
+***Run the file called runMe.sh or build.py to compile the website.*** 
 
 A website to show my professional experience. Please have a look around to find out more about why I am a good fit. 
 
