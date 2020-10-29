@@ -7,14 +7,58 @@ def build_base_file():
 def build_website(pages):
     template = build_base_file()
     for page in pages:
-        # First we add the main content
-        page_content = open(page["filename"]).read()
-        finished_page = template.replace("{{content}}", page_content).replace("{{title}}", page["title"])
-
-        # content_added = open(page["filename"], "w+").write(add_content)
-        # # Now we need to add the title
-        # finished_page = content_added.replace("{{title}}", page["title"])
-        open(page["output"], "w+").write(finished_page)
+        if page["filename"].__contains__("index"):
+            i = "{{about_me_active}}"
+            ii = ">>"
+            j = "{{portfolio_active}}"
+            jj = ""
+            k = "{{experience_active}}"
+            kk = ""
+            l = "{{contact_active}}"
+            ll = ""
+            page_content = open(page["filename"]).read()
+            finished_page = template.replace("{{content}}", page_content).replace("{{title}}", page["title"]).replace(
+                i, ii).replace(j, jj).replace(k, kk).replace(l, ll)
+            open(page["output"], "w+").write(finished_page)
+        elif page["filename"].__contains__("contact"):
+            i = "{{about_me_active}}"
+            ii = ""
+            j = "{{portfolio_active}}"
+            jj = ""
+            k = "{{experience_active}}"
+            kk = ""
+            l = "{{contact_active}}"
+            ll = ">>"
+            page_content = open(page["filename"]).read()
+            finished_page = template.replace("{{content}}", page_content).replace("{{title}}", page["title"]).replace(
+                i, ii).replace(j, jj).replace(k, kk).replace(l, ll)
+            open(page["output"], "w+").write(finished_page)
+        elif page["filename"].__contains__("Experience"):
+            i = "{{about_me_active}}"
+            ii = ""
+            j = "{{portfolio_active}}"
+            jj = ""
+            k = "{{experience_active}}"
+            kk = ">>"
+            l = "{{contact_active}}"
+            ll = ""
+            page_content = open(page["filename"]).read()
+            finished_page = template.replace("{{content}}", page_content).replace("{{title}}", page["title"]).replace(
+                i, ii).replace(j, jj).replace(k, kk).replace(l, ll)
+            open(page["output"], "w+").write(finished_page)
+        elif page["filename"].__contains__("portfolio"):
+            i = "{{about_me_active}}"
+            ii = ""
+            j = "{{portfolio_active}}"
+            jj = ">>"
+            k = "{{experience_active}}"
+            kk = ""
+            l = "{{contact_active}}"
+            ll = ""
+            page_content = open(page["filename"]).read()
+            finished_page = template.replace("{{content}}", page_content).replace("{{title}}", page["title"]).replace(
+                i, ii).replace(j, jj).replace(k, kk).replace(l, ll)
+            open(page["output"], "w+").write(finished_page)
 
 
 def main():
@@ -39,7 +83,7 @@ def main():
         {
             "filename": "content/proExperience.html",
             "output": "docs/proExperience.html",
-            "title": "JosueNunez | Professional Experience"
+            "title": "JosueNunez | Experience"
         }
     ]
 
