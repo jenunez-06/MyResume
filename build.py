@@ -7,6 +7,7 @@ def build_base_file():
 def build_website(pages):
     template = build_base_file()
     for page in pages:
+        # Had to do all these elif's since there is not built in switch-case in python.
         if page["filename"].__contains__("index"):
             i = "{{about_me_active}}"
             ii = ">>"
